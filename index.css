@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: black;
+  color: white;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  text-align: center;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+main {
+  min-height: 100svh;
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 5rem;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.subTitle {
+  font-size: 1.25rem;
+  margin-block: 1.5rem 3rem;
+}
+
+#newQuote_button {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 50px;
+  color: white;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  cursor: pointer;
+  transition: color 300ms, background-color 300ms, scale 300ms;
+  font-size: 1rem;
+}
+
+#newQuote_button:hover {
+  background-color: white;
+  color: black;
+  scale: 1.1;
+}
+
+#newQuote_button:active {
+  scale: 1;
+}
+
+#quote {
+  margin-top: 4rem;
+  width: 100%;
+  max-width: 600px;
+  margin-inline: auto;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+#quote > div {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo {
+  width: 100px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+}
+
+.quote_body > p:first-child {
+  margin-block: 1rem;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.quote_body > p:last-child {
+  font-weight: 600;
+  color: gray;
+}
+
+@media screen and (min-width: 750px) {
+  #quote > div {
+    flex-direction: row;
+    gap: 1rem;
+    text-align: start;
+    align-items: start;
+  }
+
+  .photo {
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+
+  .quote_body {
+    flex-grow: 1;
+  }
+
+  .quote_body > p:first-child {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-height: 750px) {
+  main {
+    padding-block: 10rem;
+  }
+}
